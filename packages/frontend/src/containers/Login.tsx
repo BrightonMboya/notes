@@ -4,7 +4,7 @@ import Stack from "react-bootstrap/Stack";
 import "./Login.css";
 import { useAppContext } from "../lib/contextLib";
 import { Auth } from "aws-amplify";
-import { useNavigate } from "react-router-dom";
+
 import LoaderButton from "../components/LoaderButton";
 import { onError } from "../lib/errorLib";
 import { useFormFields } from "../lib/hooksLib";
@@ -16,7 +16,7 @@ export default function Login() {
  });
   const { userHasAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(false);
-  const nav = useNavigate();
+
 
   function validateForm() {
     return fields.email.length > 0 && fields.password.length > 0;
@@ -30,7 +30,7 @@ export default function Login() {
     try {
       await Auth.signIn(fields.email, fields.password);
       userHasAuthenticated(true);
-      nav("/");
+
     } catch (error) {
       onError(error);
       setIsLoading(false);
