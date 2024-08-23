@@ -10,6 +10,7 @@
     "typescript": "5.3.3"
   },
   "dependencies": {
-    "sst": "^3.0.66"
+    "sst": "^3.0.66",
+    "stripe": "^16.8.0"
   }
 }

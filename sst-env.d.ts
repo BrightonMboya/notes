@@ -28,6 +28,10 @@ declare module "sst" {
       "secret": string
       "type": "sst.aws.CognitoUserPoolClient"
     }
+    "m": {
+      "type": "sst.sst.Secret"
+      "value": 
+    }
   }
 }
 export {}
